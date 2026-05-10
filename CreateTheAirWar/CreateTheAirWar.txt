@@ -1,0 +1,15 @@
+Name: Create: The Air War
+Description: Adds a variety of weapons that can be mounted on Create: Aeronautics contraptions, letting players kit out airships for combat.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-the-air-war
+Adds:
+- Close Strike Cruise Missile
+- Long Strike Cruise Missile
+- Close Strike Missile
+- Long Strike Missile
+- Air to Air Rocket
+- Classic German Grenade
+- 9-Rocket Box
+- Anti-Infantry Mine
+- Machine Gun
+- Tomahawk Missile
