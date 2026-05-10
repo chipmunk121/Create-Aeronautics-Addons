@@ -1,0 +1,7 @@
+Name: Create: Ballast
+Description: Adds layerable stone-based ballast blocks for balancing the weight distribution of airships and ships. Each block has up to 8 layers, with mass ranging from 2kpg to 8kpg depending on how many layers are placed.
+Links:
+- Modrinth | https://modrinth.com/mod/create-ballast
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-ballast
+Adds:
+- Ballast Stone
