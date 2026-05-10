@@ -1,0 +1,6 @@
+Name: Aeronautic Additions and ChunkLoader
+Description: An addon for Create: Aeronautics adding features felt to be missing from the base mod. Currently adds an Aeronautic Chunk Loader that, when placed on a Sable sub-level, keeps it and surrounding chunks loaded. Dynamically calculates the sub-level size and adjusts the loaded chunk area accordingly. Has no effect when placed outside a sub-level. Not recommended for very fast-moving aircraft.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/aeronautic-additions-and-chunkloader
+Adds:
+- Aeronautic Chunk Loader
