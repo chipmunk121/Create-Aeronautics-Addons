@@ -39,17 +39,25 @@ def upload_image(filepath, filename, token):
     print(f"Upload '{filename}':", r.get("upload", {}).get("result", r))
 
 def parse_txt(path):
-    data = {"Name":"","Description":"","Adds":[]}
+    data = {"Name":"","Description":"","Links":[],"Adds":[]}
     current = None
     with open(path) as f:
         for line in f:
             line = line.rstrip()
             if line.startswith("Name:"):
                 data["Name"] = line[5:].strip()
+                current = None
             elif line.startswith("Description:"):
                 data["Description"] = line[12:].strip()
+                current = None
+            elif line.startswith("Links:"):
+                current = "Links"
             elif line.startswith("Adds:"):
                 current = "Adds"
+            elif current == "Links" and line.startswith("-"):
+                parts = line[1:].strip().split("|")
+                if len(parts) == 2:
+                    data["Links"].append((parts[0].strip(), parts[1].strip()))
             elif current == "Adds" and line.startswith("-"):
                 data["Adds"].append(line[1:].strip())
     return data
@@ -88,12 +96,17 @@ for data, img_filename in addons:
     name = data["Name"]
     desc = data["Description"]
     adds = data["Adds"]
+    links = data["Links"]
 
     img_wikitext = f"[[File:{img_filename}|80px]]" if img_filename else ""
 
     adds_wikitext = ""
     if adds:
         adds_wikitext = "\n;What it adds:\n" + "\n".join(f"* {i}" for i in adds)
+
+    links_wikitext = ""
+    if links:
+        links_wikitext = "\n;Links:\n" + "\n".join(f"* [{url} {label}]" for label, url in links)
 
     block = f"""\
 <div class="addon-block" data-name="{name.lower()}">
@@ -103,6 +116,7 @@ for data, img_filename in addons:
 |
 {desc}
 {adds_wikitext}
+{links_wikitext}
 |}}
 </div>
 
