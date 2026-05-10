@@ -1,0 +1,4 @@
+Name: Synaxis
+Description: A comprehensive control and automation expansion for Sable. Build logic networks using comparators, boolean gates, weighted sums, vector utilities, flip-flops, and Lua-programmable units. Also adds configurable propulsion blocks including propellers, vector thrusters, and flaps that can be adapted to aircraft, ships, drones, or any custom mechanism.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/synaxis
