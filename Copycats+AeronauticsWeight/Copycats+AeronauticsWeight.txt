@@ -1,0 +1,5 @@
+Name: Copycats+ Aeronautics Weight
+Description: A compatibility mod between Copycats+ and Create: Aeronautics that assigns accurate mass (kpg) values to all Copycats+ blocks for the Sable physics engine. Includes mass values for all Copycats+ block types, with variable blocks like copycat layers scaling their mass by the number of layers placed.
+Links:
+- Modrinth | https://modrinth.com/mod/copycats+-aeronautics-weight
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/copycats-aeronautics-weight
