@@ -9,33 +9,34 @@ session.headers.update({
     "User-Agent": "CreateAeronauticsAddonSync/1.0 (GitHub Actions bot)"
 })
 
-# --- Login ---
 def login():
     r = session.post(API, data={"action":"query","meta":"tokens","type":"login","format":"json"})
-    print("Login token response:", r.status_code, r.text[:500])
-    r = r.json()
-    token = r["query"]["tokens"]["logintoken"]
-    session.post(API, data={
+    data = r.json()
+    token = data["query"]["tokens"]["logintoken"]
+    result = session.post(API, data={
         "action":"login","lgname":USER,"lgpassword":PASS,
         "lgtoken":token,"format":"json"
-    })
+    }).json()
+    print("Login result:", result.get("login", {}).get("result"))
 
 def get_csrf():
     r = session.get(API, params={"action":"query","meta":"tokens","format":"json"}).json()
     return r["query"]["tokens"]["csrftoken"]
 
 def edit_page(title, content, token):
-    session.post(API, data={
+    r = session.post(API, data={
         "action":"edit","title":title,"text":content,
         "token":token,"format":"json","bot":"true"
-    })
+    }).json()
+    print(f"Edit '{title}':", r.get("edit", {}).get("result", r))
 
 def upload_image(filepath, filename, token):
     with open(filepath, "rb") as f:
-        session.post(API, files={"file": (filename, f)}, data={
+        r = session.post(API, files={"file": (filename, f)}, data={
             "action":"upload","filename":filename,
             "token":token,"format":"json","ignorewarnings":"true"
-        })
+        }).json()
+    print(f"Upload '{filename}':", r.get("upload", {}).get("result", r))
 
 def parse_txt(path):
     data = {"Name":"","Description":"","Adds":[]}
@@ -53,28 +54,10 @@ def parse_txt(path):
                 data["Adds"].append(line[1:].strip())
     return data
 
-def make_wikitext(d, folder):
-    img_line = ""
-    for ext in ["png","jpg","jpeg","gif","webp"]:
-        img = f"{folder}/{folder}.{ext}"
-        if os.path.exists(img):
-            img_line = f"[[File:{folder}.{ext}|200px|right|{d['Name']} logo]]"
-            break
-    adds_section = ""
-    if d["Adds"]:
-        items = "\n".join(f"* {i}" for i in d["Adds"])
-        adds_section = f"\n== Adds ==\n{items}\n"
-    return f"""{img_line}
-== {d['Name']} ==
-{d['Description']}
-{adds_section}
-[[Category:Create Aeronautics Addons]]
-"""
-
 login()
 token = get_csrf()
 
-addon_names = []
+addons = []
 
 for txt_path in glob.glob("*/*.txt"):
     folder = os.path.dirname(txt_path)
@@ -82,35 +65,54 @@ for txt_path in glob.glob("*/*.txt"):
     if not data["Name"]:
         continue
 
-    addon_names.append((data["Name"], folder))
-
+    img_filename = None
     for ext in ["png","jpg","jpeg","gif","webp"]:
         img_path = f"{folder}/{folder}.{ext}"
         if os.path.exists(img_path):
-            upload_image(img_path, f"{folder}.{ext}", token)
+            img_filename = f"{folder}.{ext}"
+            upload_image(img_path, img_filename, token)
             break
 
-    wikitext = make_wikitext(data, folder)
-    page_title = f"Addon:{data['Name'].replace(' ', '_')}"
-    edit_page(page_title, wikitext, token)
-    print(f"Updated: {page_title}")
+    addons.append((data, img_filename))
 
-index_lines = ["== Create: Aeronautics Addons ==",
-               "Use the search box below to filter by addon name.",
-               "",
-               '<div id="addon-search-box">',
-               '<inputbox>',
-               'type=search',
-               'namespaces=Addon',
-               'placeholder=Search addons...',
-               '</inputbox>',
-               '</div>',
-               "",
-               "=== All Addons ==="]
+addons.sort(key=lambda x: x[0]["Name"].lower())
 
-for name, folder in sorted(addon_names):
-    index_lines.append(f"* [[Addon:{name.replace(' ','_')}|{name}]]")
+lines = [
+    "== Create: Aeronautics Addons ==",
+    "Search by addon name using the box below.",
+    "",
+    "<inputbox>",
+    "type=search",
+    "placeholder=Search addons...",
+    "</inputbox>",
+    "",
+    "----",
+    "",
+]
 
-index_text = "\n".join(index_lines)
+for data, img_filename in addons:
+    name = data["Name"]
+    desc = data["Description"]
+    adds = data["Adds"]
+
+    img_wikitext = f"[[File:{img_filename}|80px]]" if img_filename else ""
+
+    adds_wikitext = ""
+    if adds:
+        adds_wikitext = "\n;What it adds:\n" + "\n".join(f"* {i}" for i in adds)
+
+    block = f"""\
+{{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
+! style="text-align:left;" | {img_wikitext} {name}
+|-
+|
+{desc}
+{adds_wikitext}
+|}}
+
+"""
+    lines.append(block)
+
+index_text = "\n".join(lines)
 edit_page("Create:Aeronautics Addons", index_text, token)
-print("Updated index page.")
+print("Done.")
