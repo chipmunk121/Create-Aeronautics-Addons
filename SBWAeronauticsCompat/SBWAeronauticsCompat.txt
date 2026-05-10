@@ -1,0 +1,5 @@
+Name: SBW Aeronautics Compat
+Description: Adds compatibility between Superb Warfare and Create: Aeronautics, making SBW gun bullets properly collide with Aeronautics structures instead of passing through them. Also allows locking on to physical structures with the Javelin.
+Links:
+- Modrinth | https://modrinth.com/mod/sbw-aeronautics-compat
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/sbw-aeronautics-compat
