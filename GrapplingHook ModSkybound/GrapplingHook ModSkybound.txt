@@ -1,0 +1,9 @@
+Name: Grappling Hook Mod: Skybound
+Description: A grappling hook mod that works on moving objects. Grapple onto Create contraptions, Sable airships, and vanilla walls — the rope tracks position and rotation and stays stable when the world moves under you. Runs on both Fabric and NeoForge 1.21.1.
+Links:
+- Modrinth | https://modrinth.com/mod/grapplemod-skybound
+- Source | https://github.com/weaversworkshop/grapplemod-skybound
+Adds:
+- Grappling Hook
+- Long Fall Boots
+- Hook upgrades (motors, rockets, ender teleports, magnets, dual hooks, forcefields, rope styles)
