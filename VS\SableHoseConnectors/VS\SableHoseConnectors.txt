@@ -1,0 +1,15 @@
+Name: VS Hose Connectors
+Description: Adds blocks that make ship-to-ship transportation in Valkyrien Skies simpler and more practical. Supports both fluid and item transport between ships, with experimental support for Create: Aeronautics.
+Links:
+- Modrinth | https://modrinth.com/mod/vs-hose-connectors
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/vs-hose-connectors
+- Source | https://github.com/M-K2525/VS_Hose_Connectors
+Adds:
+- Hose Connector
+- Magnet Hose Connector
+- Item Hose Connector
+- Item Magnet Hose Connector
+- Electric Wire Connector
+- Electric Magnet Wire Connector
+- Chain Connector
+- Magnet Chain Connector
