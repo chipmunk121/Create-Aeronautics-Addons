@@ -1,0 +1,6 @@
+Name: Create Aeronautics: Kinetic Grip
+Description: An addon for Create: Aeronautics that adds player-operable handles. Unlike the standard Aeronautics handles, these can be used directly from the player's point of view, and can be combined to craft hand-held tools such as chainsaws.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-kinetic-grip
+Adds:
+- Kinetic Grip Handle
