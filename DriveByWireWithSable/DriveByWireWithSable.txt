@@ -1,0 +1,5 @@
+Name: Drive-By-Wire With Sable
+Description: A port of the Drive-By-Wire mod to Sable, letting you control vehicles via physical cables instead of redstone links. Eliminates frequency conflicts and the need for colored block items, and works with lecterns for tidy vehicle wiring. Compatible with Create: Tweaked Controller.
+Links:
+- Modrinth | https://modrinth.com/mod/drive-by-wire-sable
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/drive-by-wire-with-sable
