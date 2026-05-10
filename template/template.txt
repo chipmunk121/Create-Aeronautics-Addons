@@ -1,8 +1,8 @@
 Name: [Addon Name]
 Description: [A short description of what this addon is and what it brings to Create: Aeronautics.]
+Links:
+- [Label] | [URL]
+- [Label] | [URL]
 Adds:
-- [Item/Block/Entity Name]
-- [Item/Block/Entity Name]
-- [Item/Block/Entity Name]
 - [Item/Block/Entity Name]
 - [Item/Block/Entity Name]
