@@ -1,0 +1,6 @@
+Name: Climbable Ropes for Create Aeronautics
+Description: Adds a climb mechanic to vertical rope strands in Create: Aeronautics. Right-click any near-vertical rope strand or plunger rope with an empty hand to grab on. Supports climbing up and down, sliding, swinging the camera to rotate around the rope, jumping off, and auto-dismounting onto solid ground. Plunger ropes also support ziplining and can act as walkable rope bridges. Works on ropes attached to assembled physics objects.
+Links:
+- Modrinth | https://modrinth.com/mod/create-aeronautics-climbable-rope
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-aeronautics-climbable-ropes
+- Source | https://github.com/matejhozlar/Create-Aeronautics-Climbable-Ropes
