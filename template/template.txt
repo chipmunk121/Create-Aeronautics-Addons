@@ -1,8 +1,0 @@
-Name: Addon Name Here
-Description: A short description of what this addon is and what it brings to Create: Aeronautics.
-Links:
-- Modrinth | https://modrinth.com/
-- Curseforge | https://www.curseforge.com/minecraft
-Adds:
-- Item/Block/Entity/etc Name Here
-- Item/Block/Entity/etc Name Here
