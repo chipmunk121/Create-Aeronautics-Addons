@@ -1,0 +1,15 @@
+Name: Create: Stats & Additions
+Description: A Create addon for monitoring and controlling your factory in real time. Displays live data through panels, gauges, graphs, and holograms, with an alarm system that can trigger redstone output. Also includes a train map, a logic controller that pauses factory branches when they go idle, a cargo planning clipboard, and various kinetic controllers.
+Links:
+- Modrinth | https://modrinth.com/mod/create-graphs-stats
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-stats-additions
+Adds:
+- Stats Display Panel
+- Mini Display
+- Stats Alarm
+- Stats Configurator
+- Train Map
+- Factory Logic Controller
+- Freight Manifest Clipboard
+- Dispatch Board
+- Factory Manual
