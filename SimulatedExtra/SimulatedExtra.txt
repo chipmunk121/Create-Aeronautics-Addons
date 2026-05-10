@@ -1,0 +1,7 @@
+Name: Simulated Extra
+Description: A small addon for Create: Aeronautics/Offroad that adds centered versions of the wheel mounts. Unlike the normal wheel mount, the centered version cannot turn.
+Links:
+- Modrinth | https://modrinth.com/mod/simulated-extra
+- Source | https://github.com/Gogo64pro/simulated-extra
+Adds:
+- Centered Wheel Mount
