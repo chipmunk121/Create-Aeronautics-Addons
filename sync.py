@@ -5,10 +5,15 @@ USER = os.environ["WIKI_USERNAME"]
 PASS = os.environ["WIKI_PASSWORD"]
 
 session = requests.Session()
+session.headers.update({
+    "User-Agent": "CreateAeronauticsAddonSync/1.0 (GitHub Actions bot)"
+})
 
 # --- Login ---
 def login():
-    r = session.post(API, data={"action":"query","meta":"tokens","type":"login","format":"json"}).json()
+    r = session.post(API, data={"action":"query","meta":"tokens","type":"login","format":"json"})
+    print("Login token response:", r.status_code, r.text[:500])
+    r = r.json()
     token = r["query"]["tokens"]["logintoken"]
     session.post(API, data={
         "action":"login","lgname":USER,"lgpassword":PASS,
@@ -49,19 +54,16 @@ def parse_txt(path):
     return data
 
 def make_wikitext(d, folder):
-    # Find image
     img_line = ""
     for ext in ["png","jpg","jpeg","gif","webp"]:
         img = f"{folder}/{folder}.{ext}"
         if os.path.exists(img):
             img_line = f"[[File:{folder}.{ext}|200px|right|{d['Name']} logo]]"
             break
-
     adds_section = ""
     if d["Adds"]:
         items = "\n".join(f"* {i}" for i in d["Adds"])
         adds_section = f"\n== Adds ==\n{items}\n"
-
     return f"""{img_line}
 == {d['Name']} ==
 {d['Description']}
@@ -72,7 +74,6 @@ def make_wikitext(d, folder):
 login()
 token = get_csrf()
 
-# Build the addon index list for the search/index page
 addon_names = []
 
 for txt_path in glob.glob("*/*.txt"):
@@ -83,7 +84,6 @@ for txt_path in glob.glob("*/*.txt"):
 
     addon_names.append((data["Name"], folder))
 
-    # Upload image if present
     for ext in ["png","jpg","jpeg","gif","webp"]:
         img_path = f"{folder}/{folder}.{ext}"
         if os.path.exists(img_path):
@@ -95,7 +95,6 @@ for txt_path in glob.glob("*/*.txt"):
     edit_page(page_title, wikitext, token)
     print(f"Updated: {page_title}")
 
-# Update the index page (used for search)
 index_lines = ["== Create: Aeronautics Addons ==",
                "Use the search box below to filter by addon name.",
                "",
