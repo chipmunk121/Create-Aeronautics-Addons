@@ -1,0 +1,4 @@
+Name: Sappy Tree Physics
+Description: Makes trees fall as a single rigid body when any of their logs is broken. Leaves, vines, moss, dripleaves, cave vines, and hanging decorations all fall with the tree. Detects natural trees to avoid collapsing player-built log structures. Modded trees can be added easily without restarting.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/sappy-tree-physics
