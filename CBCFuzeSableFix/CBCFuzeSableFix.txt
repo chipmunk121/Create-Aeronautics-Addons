@@ -1,0 +1,4 @@
+Name: CBC Fuze Sable Fix
+Description: A small mod that fixes an issue where Create Big Cannons shells fail to detonate on impact with the ground when using Sable. With this mod installed, shells properly detonate on impact if they have an Impact Fuze or Inertia Fuze, removing the need for TNT as a primer.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/cbc-fuze-sable-fix
