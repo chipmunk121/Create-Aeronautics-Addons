@@ -1,8 +1,8 @@
 import os, requests, glob
 
-API = os.environ["https://aeroaddons.miraheze.org/w/api.php"]   # e.g. https://yourwiki.miraheze.org/w/api.php
-USER = os.environ["Addon_Updater"]
-PASS = os.environ["p5j6c8lvh21k4nfp4erc52quui5bhagj"]
+API = os.environ["WIKI_API_URL"]
+USER = os.environ["WIKI_USERNAME"]
+PASS = os.environ["WIKI_PASSWORD"]
 
 session = requests.Session()
 
