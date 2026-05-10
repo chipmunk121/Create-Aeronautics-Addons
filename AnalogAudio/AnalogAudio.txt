@@ -1,0 +1,12 @@
+Name: Analog Audio
+Description: Brings analog audio mediums to your world, including cassette decks, radios, walkie talkies, and speaker blocks. Integrates with Create Aeronautics to provide accurate positional audio on Sable contraptions and vehicles.
+Links:
+- Modrinth | https://modrinth.com/mod/analog-audio
+- Source | https://github.com/palmmc/AnalogAudio
+- Discord | https://discord.gg/Fuuxaq6KPh
+Adds:
+- Cassette Deck
+- Radio
+- Cassette
+- Walkie Talkie
+- Speaker Block
