@@ -1,0 +1,9 @@
+Name: Create: Aeroworks
+Description: An addon for Create: Aeronautics that adds control blocks for airships. The Gyroscope stabilizes a ship upright using rotational energy, scaling with input RPM and supporting multiple units on larger vessels. The Joystick outputs redstone signals along two axes based on player input, with keyboard mode and optional snapback.
+Links:
+- Modrinth | https://modrinth.com/mod/create-aeroworks
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-aeroworks
+- Source | https://github.com/mred231/aeroworks
+Adds:
+- Gyroscope
+- Joystick
