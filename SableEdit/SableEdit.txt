@@ -1,0 +1,9 @@
+Name: SableEdit
+Description: Provides compatibility between Sable and WorldEdit, allowing players to use WorldEdit tools directly on Sable sub-levels. Still in active development.
+Links:
+- Modrinth | https://modrinth.com/mod/sableedit
+Adds:
+- Sub-level selection restrictions (prevents selections spanning across different sub-levels)
+- Player positioning and orientation relative to the currently selected sub-level
+- Optional WorldEdit CUI support
+- //assemble command to assemble the current WorldEdit selection
