@@ -1,0 +1,9 @@
+Name: Create: Compact Flap
+Description: An addon for Create: Aeronautics that combines the functions of the Torsion Spring and Directional Gearshift into single compact blocks, useful for building aircraft control surfaces and other mechanisms. The Physical Bearing variants additionally make attached objects become a sub-level.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-compact-flap
+Adds:
+- Compact Flap Bearing
+- Analog Compact Flap Bearing
+- Compact Physical Bearing
+- Analog Compact Physical Bearing
