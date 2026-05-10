@@ -1,0 +1,9 @@
+Name: Create: Tracks
+Description: An addon for Create: Aeronautics that adds tank-style tracks for building ground vehicles. Track mounts, suspension tracks, and drive wheels can be connected and tuned via a dedicated suspension wrench, with controls for spring strength, damping, drive force, and grip. Tracks can be dyed, washed, and have their mount visuals hidden for cleaner builds. Also adds suspension wrench support to Create: Offroad wheel mounts.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-tracks
+Adds:
+- Track Mount
+- Suspension Track
+- Drive Wheel
+- Suspension Wrench
