@@ -1,0 +1,5 @@
+Name: Create: Crafts & Additions and Aeronautics Compat
+Description: Adds compatibility between Create: Aeronautics and Create: Crafts & Additions, allowing the docking connector to transfer Forge Energy when two ships are docked.
+Links:
+- Modrinth | https://modrinth.com/mod/create-crafts-additions-aeronautics-compat
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-crafts-additions-and-aeronautics-compat
