@@ -1,0 +1,6 @@
+Name: Aeronautics Camera Sync
+Description: A client-side mod that synchronizes the player's camera with the rotation of moving Create: Aeronautics contraptions. When standing on a ship or other dynamic structure, the view smoothly rotates along with it during turns, tilts, and aerial maneuvers instead of staying fixed to the world.
+Links:
+- Modrinth | https://modrinth.com/mod/aero_cam_sync
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/aeronautics-camera-sync
+- Source | https://github.com/playsi/Aeronautics-Camera-Sync
