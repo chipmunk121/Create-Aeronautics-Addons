@@ -1,0 +1,8 @@
+Name: [Addon Name]
+Description: [A short description of what this addon is and what it brings to Create: Aeronautics.]
+Adds:
+- [Item/Block/Entity Name]
+- [Item/Block/Entity Name]
+- [Item/Block/Entity Name]
+- [Item/Block/Entity Name]
+- [Item/Block/Entity Name]
