@@ -1,0 +1,8 @@
+Name: create aeronautics: toolgun
+Description: A Create: Aeronautics expansion that brings VMod-style engineering tools to the vehicle environment. Supports saving, printing, deleting, and dragging physical structures including those with child substructures and container contents. Includes a blueprint system, a magnetic drag gun that limits applied force rather than hard-capping by mass, and welding mechanics.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-aeronauticstoolgun
+Adds:
+- Blueprint Tool
+- Magnetic Drag Gun
+- Survival Magnetic Gun
