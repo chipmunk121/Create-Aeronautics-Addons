@@ -1,0 +1,12 @@
+Name: Create Propulsion: Simulated
+Description: A port of Create: Propulsion to NeoForge 1.21.1 with full support for Sable and Create: Aeronautics. Adds thruster blocks that integrate directly with Sable contraption physics, including force-at-point behavior for proper torque and multi-thruster handling on assembled crafts.
+Links:
+- Modrinth | https://modrinth.com/mod/create-propulsion-simulated
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-propulsion-simulated
+- Source | https://github.com/Propulsion-Team/create-propulsion-simulated
+- Discord | https://discord.gg/JHcArsDhh4
+Adds:
+- Thruster (fuel-based propulsion)
+- Ion Thruster (FE-powered propulsion)
+- Creative Thruster (configurable high-power propulsion)
+- Copycat Wings
