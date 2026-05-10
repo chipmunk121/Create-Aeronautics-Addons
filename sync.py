@@ -80,10 +80,6 @@ addons.sort(key=lambda x: x[0]["Name"].lower())
 lines = [
     "== Create: Aeronautics Addons ==",
     "",
-    '<div style="margin-bottom:1em;">',
-    '<input id="addon-search" type="text" placeholder="Search addons..." style="padding:6px 10px;width:300px;font-size:1em;border:1px solid #a2a9b1;border-radius:4px;">',
-    '</div>',
-    "",
     "----",
     "",
 ]
