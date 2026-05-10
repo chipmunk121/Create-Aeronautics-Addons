@@ -1,0 +1,4 @@
+Name: Sable Schematic Tool
+Description: Adds a blueprint save and load system for Sable sub-levels. Properly handles the complex state that sub-levels carry — block entities, entities, contraption anchors, rope connectors, and swivel bearings — remapping references correctly on placement rather than just copying raw data. Includes an in-game tool for saving and loading without typing commands.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/sable-schematic-tool
