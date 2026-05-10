@@ -79,12 +79,21 @@ addons.sort(key=lambda x: x[0]["Name"].lower())
 
 lines = [
     "== Create: Aeronautics Addons ==",
-    "Search by addon name using the box below.",
     "",
-    "<inputbox>",
-    "type=search",
-    "placeholder=Search addons...",
-    "</inputbox>",
+    '<div style="margin-bottom:1em;">',
+    '<input id="addon-search" type="text" placeholder="Search addons..." style="padding:6px 10px;width:300px;font-size:1em;border:1px solid #a2a9b1;border-radius:4px;" oninput="filterAddons(this.value)">',
+    '</div>',
+    "",
+    '<script>',
+    'function filterAddons(query) {',
+    '  var q = query.toLowerCase();',
+    '  var tables = document.querySelectorAll(".addon-block");',
+    '  tables.forEach(function(t) {',
+    '    var name = t.getAttribute("data-name").toLowerCase();',
+    '    t.style.display = name.includes(q) ? "" : "none";',
+    '  });',
+    '}',
+    '</script>',
     "",
     "----",
     "",
@@ -102,6 +111,7 @@ for data, img_filename in addons:
         adds_wikitext = "\n;What it adds:\n" + "\n".join(f"* {i}" for i in adds)
 
     block = f"""\
+<div class="addon-block" data-name="{name.lower()}">
 {{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
 ! style="text-align:left;" | {img_wikitext} {name}
 |-
@@ -109,6 +119,7 @@ for data, img_filename in addons:
 {desc}
 {adds_wikitext}
 |}}
+</div>
 
 """
     lines.append(block)
