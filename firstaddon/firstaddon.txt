@@ -1,0 +1,5 @@
+Name: My First Addon
+Description: Adds rockets and stuff to Create: Aeronautics.
+Adds:
+- Rocket Engine
+- Fuel Tank
