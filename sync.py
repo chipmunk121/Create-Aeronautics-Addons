@@ -118,11 +118,11 @@ for data, img_filename in addons:
 {adds_wikitext}
 {links_wikitext}
 |}}
-</div>
+</div>"""
 
-"""
-    lines.append(block)
+    lines.append(block.strip())
 
 index_text = "\n".join(lines)
+
 edit_page("Create:Aeronautics Addons", index_text, token)
 print("Done.")
