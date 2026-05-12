@@ -1,0 +1,6 @@
+Name: Auto Sable Physics
+Description: An event-driven automation addon for Sable that watches for block changes, detects unsupported structures, and automatically converts them into Sable physics sub-levels. Break support blocks, cut trees, or collapse small unsupported structures and Sable handles the motion automatically. Physics objects can also auto-restore after being idle, and a Sable hammer item is included for manually pinning or restoring objects.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/auto-sable-physics
+Adds:
+- Sable Hammer
