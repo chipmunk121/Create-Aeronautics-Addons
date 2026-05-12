@@ -1,0 +1,4 @@
+Name: Create Aeronautics Lift Patch
+Description: Fixes the Sable lift and drag calculations to use a proper quadratic increase with velocity instead of the current linear calculation. Makes it easier to build both large and small planes in Create: Aeronautics since less wing area is needed to generate lift. Lift and drag coefficients can be adjusted in the config.
+Links:
+- CurseForge | https://www.curseforge.com/minecraft/mc-mods/create-aeronautics-lift-patch
